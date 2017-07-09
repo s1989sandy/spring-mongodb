@@ -1,0 +1,53 @@
+<html>
+	<head>
+		<title>Seller Integration</title>
+		<style>
+			table, th, td {
+			   border: 1px solid black;
+			   border-spacing: 0px;
+			}
+			th, td {
+				padding: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<table>
+			<thead>
+				<tr>
+					<th>Shop Name</th>
+					<th>Partner ID</th>
+					<th>Seller ID</th>
+					<th>Access Token</th>
+					<th>Consumer ID</th>
+					
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="seller : ${sellerList}">
+					<td th:text="${seller.shopName}"></td>
+					<td th:text="${seller.partnerId}"></td>
+					<td th:text="${seller.sellerId}"></td>
+					<td th:text="${seller.accessToken}"></td>
+					<td th:text="${seller.consumerId}"></td>
+				</tr>
+			</tbody>
+		</table>
+		<br />
+		<h2>Add Seller</h2>
+		<form action="/addSeller" method="POST">
+			Shop Name <input type="text" id="shopName" name="shopName" /><br />
+			Partner ID <input type="text" id="partnerId" name="partnerId" /><br />
+			Seller ID <input type="text" id="sellerId" name="sellerId" /><br />
+			Access Token <input type="text" id="accessToken" name="accessToken" /><br />
+			Consumer ID <input type="text" id="consumerId" name="consumerId" /><br />
+			
+			<input type="submit" />
+		</form>
+		<h2>Search for Seller</h2>
+		<form action="/search" method="POST">
+			<input type="text" name="search" id="search" th:value="${search}" />
+			<input type="submit" value="Search" />
+		</form>
+	</body>
+</html>
