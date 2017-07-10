@@ -1,0 +1,5 @@
+MongoDB Installation:
+Download the mongoDB msi file from: https://www.mongodb.com/download-center#community
+then install it on the local system
+Run the MondoDB before running the java application
+"C:\Program Files\MongoDB\Server\3.4\bin\mongod.exe"

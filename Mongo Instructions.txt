@@ -1,0 +1,34 @@
+To start the MongoDB:
+Open command prompt in administrator mode
+C:\windows\system32>cd "\Program Files\MongoDB\Server\3.4\bin"
+C:\Program Files\MongoDB\Server\3.4\bin>mongod.exe
+
+To Query the Database:
+Open one more command prompt in administrator mode
+C:\windows\system32>cd "\Program Files\MongoDB\Server\3.4\bin"
+C:\Program Files\MongoDB\Server\3.4\bin>mongod.exe
+
+To list the Databases:
+>show dbs
+Shopify_Database  0.000GB
+admin             0.000GB
+car_dealer        0.000GB
+local             0.000GB
+seller_database   0.000GB
+
+To switch to the DB:
+>use Shopify_Database
+
+To list the collections/tables: In mongo db everythind is stored in the form the collections. In our case collection name is shopifysellers.
+>show tables  or show collections.
+ShopInfo
+
+To see the records in the tables:
+>db.ShopInfo.find();
+
+
+To fetch the record based on ID(Primary Key):
+>db.ShopInfo.find({ _id:"NY FASHION" })
+
+
+
