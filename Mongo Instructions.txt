@@ -1,12 +1,10 @@
 To start the MongoDB:
 Open command prompt in administrator mode
-C:\windows\system32>cd "\Program Files\MongoDB\Server\3.4\bin"
-C:\Program Files\MongoDB\Server\3.4\bin>mongod.exe
+C:\windows\system32>"C:\Program Files\MongoDB\Server\3.4\bin>mongod.exe"
 
 To Query the Database:
 Open one more command prompt in administrator mode
-C:\windows\system32>cd "\Program Files\MongoDB\Server\3.4\bin"
-C:\Program Files\MongoDB\Server\3.4\bin>mongod.exe
+C:\windows\system32>"C:\Program Files\MongoDB\Server\3.4\bin>mongo.exe"
 
 To list the Databases:
 >show dbs
